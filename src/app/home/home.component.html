@@ -1,0 +1,89 @@
+<script src="https://kit.fontawesome.com/f45e505356.js" crossorigin="anonymous"></script>
+<div class="main">
+    <div class="container">
+  
+        <div *ngFor = "let data of alldata1 ; let i = index" class="card" >
+            
+            <img src="{{data.avatar}}" alt=""><br>
+    
+            <div class="user-detail">
+               <b> FirstName</b>:  {{data.first_name}}<br>
+                <b>LastName</b>:  {{data.last_name}}<br>
+                <b>Email</b>:  {{data.email}}<br>
+            </div>
+        
+          <button (click) = "updateR(data , i)" class="btn1">Update</button>
+          <button (click) = "delete(data)" class="btn2">Delete</button>
+          <br>
+          <br>
+        </div>
+    </div>
+    <br>
+    <div class="form">
+    
+        <form [formGroup] = 'form' (ngSubmit) = 'submit()' *ngIf="toggleSubmit">
+            <h1>Add User</h1>
+            <input placeholder="Enter First Name" formControlName = 'first_name'>
+            <div *ngIf= "form?.controls?.first_name?.touched">
+                <div *ngIf= "form?.controls?.first_name?.errors?.required">
+                    <p style="color: red;">first Name is required</p>
+                </div>
+            </div>
+            <br><br>
+            <input placeholder="Enter Last Name" formControlName = 'last_name'>
+            <div *ngIf= "form?.controls?.last_name?.touched">
+                <div *ngIf= "form?.controls?.last_name?.errors?.required">
+                    <p style="color: red;">Last Name is required</p>
+                </div>
+            </div>
+            <br><br>
+            <input placeholder="Enter Email" formControlName = 'email'>
+            <div *ngIf= "form?.controls?.email?.touched">
+                <div *ngIf= "form?.controls?.email?.errors?.required">
+                    <p style="color: red;">Email is required</p>
+                </div>
+                <div *ngIf= "form?.controls?.email?.errors?.pattern">
+                    <!-- <p style="color: red;">Enter Valid Email</p> -->
+                </div>
+            </div>
+            <br><br>
+            <button type="submit" class="btn3"> Submit </button>
+            
+        </form>
+        <form [formGroup] = 'form' (ngSubmit) = 'update()' *ngIf="toggleUpdate">
+            <h1>Update User</h1>
+            <input placeholder="Enter First Name" formControlName = 'first_name'>
+            <div *ngIf= "form?.controls?.first_name?.touched">
+                <div *ngIf= "form?.controls?.first_name?.errors?.required">
+                    <p style="color: red;">first Name is required</p>
+                </div>
+            </div>
+            <br><br>
+            <input placeholder="Enter Last Name" formControlName = 'last_name'>
+            <div *ngIf= "form?.controls?.last_name?.touched">
+                <div *ngIf= "form?.controls?.last_name?.errors?.required">
+                    <p style="color: red;">Last Name is required</p>
+                </div>
+            </div>
+            <br><br>
+            <input placeholder="Enter Email" formControlName = 'email'>
+            <div *ngIf= "form?.controls?.email?.touched">
+                <div *ngIf= "form?.controls?.email?.errors?.required">
+                    <p style="color: red;">Email is required</p>
+                </div>
+                <!-- <div *ngIf= "form?.controls?.email?.errors?.pattern">
+                    <p style="color: red;">Enter Valid Email</p>
+                </div> -->
+            </div>
+            <br><br>
+            <button type="submit" class="btn3"> Submit </button>
+        </form>
+    </div>
+    <div class="fork">
+        <h3>Fork Join</h3>
+        <button (click) = "forkjoin()" class="btn4"> Fork Join </button>
+    </div>
+  </div>
+  
+    
+  

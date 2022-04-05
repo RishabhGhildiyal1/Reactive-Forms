@@ -1,0 +1,100 @@
+.main{
+    background-color:#e0ddc8;
+    @media screen and (min-width: 480px) {
+        body {
+          background-color: black;
+        }
+      }
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    flex-wrap: wrap;
+
+}
+.card{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color:darkcyan;
+    border-radius: 15px;
+    box-shadow: 10px 5px;
+}
+img{
+    align-items: center;
+    border-radius: 50%;
+    
+}
+img:hover{
+    border:2px solid blue;
+}
+.user-detail{
+    text-align: center;
+    line-height: 30px;
+}
+.btn2{
+    height: 30px;
+    width: 50%;
+    margin: 8px;
+    background-color: red;
+    color:white;
+    border-radius: 5px;
+    font-size: large;
+}
+.btn1{
+    height: 30px;
+    width: 50%;
+    margin: 8px;
+    font-size: large;
+    background-color: green;
+    color:white;
+    border-radius: 5px;
+}
+.form{
+    display: flex;
+    margin: 30px;
+}
+form{
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+    width: 35%;
+    height: 50%;
+    background-color:#f0da34;
+    border-radius: 20px;
+    box-shadow: 10px 5px;
+}
+input{
+    line-height: 30px;
+}
+.btn3{
+    height: 40px;
+    width: 100px;
+    margin: 8px;
+    font-size: large;
+    background-color: red;
+    color:white;
+    border-radius: 5px;
+}
+.btn4{
+    height: 40px;
+    width: 100px;
+    margin: 8px;
+    font-size: large;
+    background-color: red;
+    color:white;
+    border-radius: 5px;
+}
+.fork{
+    border: 2px solid black;
+    text-align: center;
+    margin: auto;
+    width: 15%;
+    background-color:#e7d655;
+    border-radius: 20px;
+    box-shadow: 10px 5px;
+}
